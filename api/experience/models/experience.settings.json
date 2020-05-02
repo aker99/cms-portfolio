@@ -9,7 +9,7 @@
     "timestamps": true
   },
   "attributes": {
-    "Profile": {
+    "profile": {
       "type": "string",
       "required": true
     },
@@ -29,6 +29,20 @@
     },
     "location": {
       "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Volunteer",
+        "Internship",
+        "PartTime",
+        "FullTime",
+        "Remote",
+        "Freelance"
+      ],
+      "unique": false,
+      "required": false,
+      "default": "FullTime"
     }
   }
 }
