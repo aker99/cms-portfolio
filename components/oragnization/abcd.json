@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_oragnization_abcds",
+  "info": {
+    "name": "ABCD",
+    "icon": "chalkboard"
+  },
+  "options": {},
+  "attributes": {
+    "xfdsfds": {
+      "type": "string"
+    }
+  }
+}

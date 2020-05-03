@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_resume_common_items",
+  "info": {
+    "name": "CommonItem",
+    "icon": "sitemap"
+  },
+  "options": {},
+  "attributes": {
+    "startDate": {
+      "type": "date",
+      "default": "2020-05-03T06:30:00.000Z",
+      "required": true
+    },
+    "desc": {
+      "type": "richtext"
+    },
+    "sortPriority": {
+      "type": "integer",
+      "unique": true,
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "organization": {
+      "model": "organization"
+    }
+  }
+}

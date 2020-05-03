@@ -13,20 +13,6 @@
       "type": "string",
       "required": true
     },
-    "organization": {
-      "type": "string",
-      "required": true
-    },
-    "startDate": {
-      "type": "date",
-      "required": true
-    },
-    "endDate": {
-      "type": "date"
-    },
-    "desc": {
-      "type": "richtext"
-    },
     "location": {
       "type": "string"
     },
@@ -43,6 +29,11 @@
       "unique": false,
       "required": false,
       "default": "FullTime"
+    },
+    "details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "resume.common-item"
     }
   }
 }

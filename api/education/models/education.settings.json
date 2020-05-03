@@ -9,23 +9,15 @@
     "timestamps": true
   },
   "attributes": {
-    "Course": {
+    "course": {
       "type": "string",
       "required": true
     },
-    "organization": {
-      "type": "string",
+    "details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "resume.common-item",
       "required": true
-    },
-    "startDate": {
-      "type": "date",
-      "required": true
-    },
-    "endDate": {
-      "type": "date"
-    },
-    "desc": {
-      "type": "richtext"
     }
   }
 }

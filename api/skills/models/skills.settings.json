@@ -18,6 +18,23 @@
       "required": true,
       "max": 100,
       "min": 0
+    },
+    "sortPriority": {
+      "type": "integer",
+      "required": true,
+      "unique": false,
+      "default": 10
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Tags",
+        "Language",
+        "Framework",
+        "SoftwareNTechnology",
+        "Board"
+      ],
+      "required": true
     }
   }
 }
