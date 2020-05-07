@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "name": "Experience"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "desc": {
+      "type": "richtext"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Education",
+        "Volunteer",
+        "Internship",
+        "PartTime",
+        "FullTime",
+        "Remote",
+        "Freelance"
+      ]
+    },
+    "organization": {
+      "model": "organization"
+    },
+    "location": {
+      "type": "string"
+    },
+    "displayDetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common-for-all.activation",
+      "required": true
+    }
+  }
+}

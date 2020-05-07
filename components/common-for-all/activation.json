@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_for_all_activations",
+  "info": {
+    "name": "activation",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "priority": {
+      "type": "integer",
+      "required": true,
+      "default": 20,
+      "private": true
+    },
+    "publish": {
+      "type": "boolean",
+      "default": true,
+      "required": true,
+      "private": false
+    }
+  }
+}

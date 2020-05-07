@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills",
+  "info": {
+    "name": "Skill"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "percentage": {
+      "type": "integer",
+      "required": true
+    },
+    "displayDetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common-for-all.activation",
+      "required": true
+    }
+  }
+}
