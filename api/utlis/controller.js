@@ -1,7 +1,7 @@
 const { sanitizeEntity } = require('strapi-utils');
 const {  removeExtraOrganization } = require('./removeattributes')
 module.exports = {
-    getActive: async(ctx, apiName, remove) => {
+    getActive: async(ctx, apiName, removeAttribute, EntitySelector) => {
         let sort = 0;
         if(ctx.query.sort){
             if(ctx.query.sort === 'ASC'){
@@ -21,12 +21,21 @@ module.exports = {
         if( sort ) {
             entities.sort( (a,b) => (b['displayDetails']['priority']-a['displayDetails']['priority'])*sort)
         }
+        
         const result = entities.reduce( (result, entity) => {
+
             if (entity['displayDetails']['publish'] == true){
+                let flag = true;
 
-                remove.forEach( func => func(entity));
+                if(EntitySelector){
+                    flag = EntitySelector['invertor'] && true;
+                    flag = EntitySelector['options'].indexOf(entity[EntitySelector['attr']]) == -1 ? flag : !flag
+                }
 
-                result.push(sanitizeEntity(entity, { model : strapi.models[apiName] }))
+                if(flag){
+                    removeAttribute.forEach( func => func(entity));
+                    result.push(sanitizeEntity(entity, { model : strapi.models[apiName] }))
+                }
             }
             return result;
         },[]);

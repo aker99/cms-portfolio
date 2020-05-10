@@ -9,7 +9,7 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
@@ -35,6 +35,10 @@
       "repeatable": false,
       "component": "common-for-all.activation",
       "required": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

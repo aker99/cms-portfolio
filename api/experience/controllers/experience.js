@@ -7,7 +7,16 @@ const {  removeCURDDates,removeFromAll, removeExtraOrganization } = require('../
  */
 
 module.exports = {
+
     published: async ctx => {
         return  await getActive(ctx,'experience',[removeFromAll, removeCURDDates, removeExtraOrganization])
+    },
+
+    publishedProfessional: async ctx => {
+        return  await getActive(ctx,'experience',[removeFromAll, removeCURDDates, removeExtraOrganization],{
+            attr: 'type',
+            options: ['Education','Volunteer'],
+            invertor: true
+        })
     }
 };

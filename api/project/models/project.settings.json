@@ -40,6 +40,10 @@
       "repeatable": false,
       "component": "common-for-all.activation",
       "required": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

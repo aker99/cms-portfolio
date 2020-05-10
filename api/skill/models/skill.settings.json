@@ -23,6 +23,17 @@
       "repeatable": false,
       "component": "common-for-all.activation",
       "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Tags",
+        "Language",
+        "Framework",
+        "SoftwareNTechnology",
+        "Board"
+      ],
+      "required": true
     }
   }
 }

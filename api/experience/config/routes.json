@@ -26,6 +26,14 @@
     },
     {
       "method": "GET",
+      "path": "/experiences/active/professional",
+      "handler": "experience.publishedProfessional",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/experiences/:id",
       "handler": "experience.findOne",
       "config": {
